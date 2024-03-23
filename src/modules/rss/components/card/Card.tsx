@@ -1,5 +1,5 @@
-import "./styles.scss";
-const Card = ({ title, date, imgSrc }: any) => {
+import './styles.scss';
+const Card = ({ title, imgSrc }: any) => {
   return (
     <>
       <div className="card">

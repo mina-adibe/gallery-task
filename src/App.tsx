@@ -1,4 +1,4 @@
-import List from "./modules/rss/views/List";
+import List from './modules/rss/views/List';
 
 function App() {
   return (
