@@ -1,0 +1,15 @@
+h1::before {
+  background-color: #fee300;
+  width: 4rem;
+  content: "";
+  display: inline-block;
+  height: 0.3rem;
+  position: relative;
+  right: 0.5em;
+  margin-left: 3rem;
+  margin-bottom: -0.5rem;
+}
+
+h1 {
+  color: #727272;
+}
