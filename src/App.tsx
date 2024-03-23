@@ -1,11 +1,9 @@
-import { Button } from "react-bootstrap";
-import { Badge } from "react-bootstrap";
-import Dropdown from "react-bootstrap/Dropdown";
+import List from "./modules/rss/views/List";
 
 function App() {
   return (
     <>
-      <p>Hello world </p>
+      <List />
     </>
   );
 }
