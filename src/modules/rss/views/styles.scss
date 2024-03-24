@@ -13,7 +13,7 @@
   /* Single column layout for mobile */
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 10px;
+  gap: 7px;
   grid-auto-flow: row;
 }
 
@@ -31,6 +31,7 @@
     /* Two columns for tablets */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    max-width: 80vw;
   }
   .list__container div {
     /* Adjust the span for tablet */

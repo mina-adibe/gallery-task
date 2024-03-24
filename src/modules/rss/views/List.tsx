@@ -28,12 +28,18 @@ const List = () => {
   };
 
   return (
-    <section className="main__container">
+    <>
       <Header />
-      <div className="list__container">{blogCards}</div>
-      {hasMoreData ? <ViewMoreBtn onClick={loadMoreBlogs} disabled={isFetching} /> : <div>No more items to load.</div>}
-      {error && <div className="error">{error}</div>}
-    </section>
+      <section className="main__container">
+        <div className="list__container">{blogCards}</div>
+        {hasMoreData ? (
+          <ViewMoreBtn onClick={loadMoreBlogs} disabled={isFetching} />
+        ) : (
+          <div>No more items to load.</div>
+        )}
+        {error && <div className="error">{error}</div>}
+      </section>
+    </>
   );
 };
 
