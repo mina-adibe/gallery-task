@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# gallery-task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Idea of the App
 
-Currently, two official plugins are available:
+The task was to implement a small webapp that will list photos . by fetching data directly from jsonplaceholder public API ) and using View more to implement infinite scroll.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshot
 
-## Expanding the ESLint configuration
+The final result of the project looks like :
+![](https://raw.githubusercontent.com/mina-adibe/gallery-task/45fc12bf3bdd0a08afc28945bea4bce1404540cb/src/assets/screen1.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used in Project
 
-- Configure the top-level `parserOptions` property like this:
+- Reactjs
+- Axios
+- React-bootstrap
+- Typescript
+- React-router-dom
+- Jsonplaceholder API
+- Scss
+- eslint
+- prettier
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
+## Setup
+
+To setup the project you have to :
+git clone https://github.com/mina-adibe/gallery-task.git
+
+- install all project dependencies with `npm install`
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Running the app
+
+To get the app up and running use :
+
+```
+
+npm run dev
+
+```
+
+The project will be available at :  **http://localhost:3000 to view it in the browser.**
+```
