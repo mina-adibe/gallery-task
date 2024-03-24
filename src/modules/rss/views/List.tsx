@@ -10,7 +10,7 @@ const List = () => {
   const { posts, page, setPage, limit, error, hasMoreData, isFetching } = useFetchPhotos();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // @ts-ignore comment - TODO: fix this
+  // @ts-expect-error  - TODO: fix this
   const blogCards = posts.map((item: Post) => {
     return (
       <div className="item" key={item.id}>

@@ -23,6 +23,7 @@ const useFetchPhotos = () => {
   const [limit, setLimit] = React.useState<number>(parsedLimit);
 
   const fetchPhotos = (offset: string) => {
+    setIsFetching(true);
     api
       .get(`photos/${offset}`)
       .then((response) => {
@@ -31,10 +32,8 @@ const useFetchPhotos = () => {
         if (response.data.length === 0) {
           setHasMoreData(false);
         }
-        setIsFetching(false);
       })
       .catch((error) => {
-        setIsFetching(false);
         setError(error.message);
       })
       .finally(() => {
