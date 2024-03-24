@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { api } from '../../../api/api';
+import { api } from '../../../../api/api';
+import { Posts } from './types';
 
-const UseFetchPhotos = () => {
+const useFetchPhotos = () => {
   const [searchParams] = useSearchParams();
-  const [posts, setPosts] = React.useState([]);
-  const [error, setError] = React.useState(null);
+  const [posts, setPosts] = React.useState<Posts[]>([]);
+  const [error, setError] = React.useState<string | null>(null);
   const [hasMoreData, setHasMoreData] = React.useState<boolean>(true);
   const [isFetching, setIsFetching] = React.useState<boolean>(false);
 
@@ -21,7 +22,7 @@ const UseFetchPhotos = () => {
   const [page, setPage] = React.useState<number>(parsedPage);
   const [limit, setLimit] = React.useState<number>(parsedLimit);
 
-  const fetchPhotos = (offset: any) => {
+  const fetchPhotos = (offset: string) => {
     api
       .get(`photos/${offset}`)
       .then((response) => {
@@ -49,4 +50,4 @@ const UseFetchPhotos = () => {
   return { posts, setPosts, page, setPage, limit, setLimit, error, hasMoreData, isFetching };
 };
 
-export default UseFetchPhotos;
+export default useFetchPhotos;

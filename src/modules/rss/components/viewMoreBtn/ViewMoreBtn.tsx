@@ -1,6 +1,7 @@
+import { ViewMoreBtnProps } from './types';
 import './styles.scss';
 
-const ViewMoreBtn = ({ onClick, disabled }) => {
+const ViewMoreBtn = ({ onClick, disabled }: ViewMoreBtnProps) => {
   return (
     <div className="button-container">
       <button className="btn" onClick={onClick} disabled={disabled}>

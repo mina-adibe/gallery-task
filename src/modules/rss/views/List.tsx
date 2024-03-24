@@ -1,18 +1,20 @@
+import { useSearchParams } from 'react-router-dom';
 import Card from '../components/card/Card';
-import './styles.scss';
-import UseFetchPhotos from '../hooks/UseFetchPhotos';
 import Header from '../components/header.tsx/Header';
 import ViewMoreBtn from '../components/viewMoreBtn/ViewMoreBtn';
-import { useSearchParams } from 'react-router-dom';
+import { Post } from '../hooks/useFetchPhotos/types';
+import useFetchPhotos from '../hooks/useFetchPhotos/useFetchPhotos';
+import './styles.scss';
 
 const List = () => {
-  const { posts, page, setPage, limit, error, hasMoreData, isFetching } = UseFetchPhotos();
+  const { posts, page, setPage, limit, error, hasMoreData, isFetching } = useFetchPhotos();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const blogCards = posts.map((blog) => {
+  // @ts-ignore comment - TODO: fix this
+  const blogCards = posts.map((item: Post) => {
     return (
-      <div className="item" key={blog.id}>
-        <Card title={blog.title} date={blog.date} imgSrc={blog.url} />
+      <div className="item" key={item.id}>
+        <Card title={item.title} date={item.date} imgSrc={item.url} />
       </div>
     );
   });
